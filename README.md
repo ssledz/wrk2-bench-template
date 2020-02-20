@@ -16,3 +16,9 @@ Print results
 ```bash
 cat out.json
 ```
+
+## Resources
+
+* [ssledz/wrk2-bench:latest](https://github.com/ssledz/dockerland/tree/master/wrk2-bench)
+* [wrk](https://github.com/wg/wrk)
+* [wrk2](https://github.com/giltene/wrk2)
