@@ -5,6 +5,51 @@ Run web server
 ./dummy-web-server.py 8094
 ```
 
+Prepare test input and save it to `in.json`
+
+```bash
+[
+  {
+    "url": "http://localhost:8094/user",
+    "method": "post",
+    "headers": [
+      {
+        "key": "Host",
+        "value": "domain.io"
+      },
+      {
+        "key": "User-Agent",
+        "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
+      }
+    ],
+    "payload": {
+      "username": "gabi",
+      "age": 3
+    }
+  },
+  {
+    "url": "http://localhost:8094/user/1",
+    "method": "put",
+    "payload": {
+      "username": "yuri",
+      "age": 13
+    }
+  },
+  {
+    "url": "http://localhost:8094/user/1",
+    "method": "get"
+  },
+  {
+    "url": "http://localhost:8094/user/2"
+  },
+  {
+    "url": "http://localhost:8094/home",
+    "method": "head"
+  }
+]
+
+```
+
 Do benchmark
 ```bash
 ./build.sh
